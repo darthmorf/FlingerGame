@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class flingerBehaviour : MonoBehaviour
 {
-    private bool mouseHeld = false;
-    private Vector3 startPos;
     private LineRenderer lr;
     private Camera cam;
     private GameObject line;
-    private Rigidbody rb;
+    private Rigidbody2D rb;
+
+    private Vector2 launchVelocity = new Vector2(2f, 4f);
 
     void Start()
     {
@@ -22,34 +22,26 @@ public class flingerBehaviour : MonoBehaviour
         lr.endWidth = 0.1f;
 
         cam = Camera.main;
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        startPos = gameObject.transform.position;
         line.transform.position = gameObject.transform.position;
 
         if (Input.GetMouseButton(0))
         {
-            if (!mouseHeld)
-            {
-                mouseHeld = true;
-                lr.SetPosition(0, startPos);
-            }
-            Vector3 mouseCurrentPos = cam.ScreenToWorldPoint(Input.mousePosition);
-            lr.SetPosition(0, startPos);
-            lr.SetPosition(1, new Vector3(-mouseCurrentPos.x, -mouseCurrentPos.y));
+            Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+            launchVelocity = ((Vector2) transform.position - mousePos) * 2;
+
+            drawArc();
         }
-        else if (!Input.GetMouseButton(0) && mouseHeld)
+        else if (!Input.GetMouseButton(0))
         {
-            mouseHeld = false;
-            Vector3 mouseEndPos = cam.ScreenToWorldPoint(Input.mousePosition);
-
-            Debug.Log(Vector3.Distance(startPos, mouseEndPos));
+            lr.positionCount = 0;
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonUp(0))
         {
             Launch();
         }
@@ -57,6 +49,23 @@ public class flingerBehaviour : MonoBehaviour
 
     void Launch()
     {
-        rb.velocity = new Vector2(1f, 2f);
+        rb.velocity = launchVelocity;    
+    }
+
+    Vector2 calculatePosition(float elapsedTime)
+    {
+        Vector2 pos = gameObject.transform.position;
+        return Physics2D.gravity * elapsedTime * elapsedTime * 0.5f + launchVelocity * elapsedTime + pos;
+    }
+
+    void drawArc()
+    {
+        int pointCount = 20;
+        lr.SetPosition(0, gameObject.transform.position);
+        lr.positionCount = pointCount;
+        for (int i = 1; i < pointCount; i++)
+        {
+            lr.SetPosition(i, calculatePosition(0.05f * i));
+        }        
     }
 }
