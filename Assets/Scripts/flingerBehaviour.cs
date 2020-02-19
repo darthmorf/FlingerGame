@@ -15,9 +15,13 @@ public class flingerBehaviour : MonoBehaviour
     {
         line = new GameObject();        
         lr = line.AddComponent<LineRenderer>();
-        //lr.material = new Material(Shader.Find("Particles/Alpha Blended Premultiply"));
-        lr.startColor = Color.white;
-        lr.endColor = lr.startColor;
+        lr.material = new Material(Shader.Find("Sprites/Default"));
+        Gradient gradient = new Gradient();
+        gradient.SetKeys(
+            new GradientColorKey[] { new GradientColorKey(Color.white, 0.0f) },
+            new GradientAlphaKey[] { new GradientAlphaKey(0.5f, 0.0f), new GradientAlphaKey(0f, 1f) }
+        );
+        lr.colorGradient = gradient;
         lr.startWidth = 0.1f;
         lr.endWidth = 0.1f;
 
@@ -60,7 +64,7 @@ public class flingerBehaviour : MonoBehaviour
 
     void drawArc()
     {
-        int pointCount = 20;
+        int pointCount = 25;
         lr.SetPosition(0, gameObject.transform.position);
         lr.positionCount = pointCount;
         for (int i = 1; i < pointCount; i++)
