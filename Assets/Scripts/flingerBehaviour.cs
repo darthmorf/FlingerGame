@@ -29,7 +29,7 @@ public class flingerBehaviour : MonoBehaviour
     {
         line.transform.position = gameObject.transform.position;
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && rb.IsSleeping())
         {
             Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             launchVelocity = ((Vector2) transform.position - mousePos) * 2;
@@ -41,7 +41,7 @@ public class flingerBehaviour : MonoBehaviour
             lr.positionCount = 0;
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && rb.IsSleeping())
         {
             Launch();
         }
