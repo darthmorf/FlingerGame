@@ -366,12 +366,12 @@ PrefabInstance:
     - target: {fileID: 8141404746890883959, guid: c2f1bb060f3273b4bb0e618e8d68adfd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6
+      value: -6.141
       objectReference: {fileID: 0}
     - target: {fileID: 8141404746890883959, guid: c2f1bb060f3273b4bb0e618e8d68adfd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.64
+      value: -1.481
       objectReference: {fileID: 0}
     - target: {fileID: 8141404746890883959, guid: c2f1bb060f3273b4bb0e618e8d68adfd,
         type: 3}
@@ -418,6 +418,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8141404746890883959, guid: c2f1bb060f3273b4bb0e618e8d68adfd,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5572488
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141404746890883959, guid: c2f1bb060f3273b4bb0e618e8d68adfd,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.50479203
+      objectReference: {fileID: 0}
     - target: {fileID: 8141404746890883961, guid: c2f1bb060f3273b4bb0e618e8d68adfd,
         type: 3}
       propertyPath: m_Name
@@ -430,12 +440,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2f1bb060f3273b4bb0e618e8d68adfd, type: 3}
---- !u!1 &573697661 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8141404746890883961, guid: c2f1bb060f3273b4bb0e618e8d68adfd,
-    type: 3}
-  m_PrefabInstance: {fileID: 518317512}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &673289099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -776,7 +780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150d1eb3d2d75784095c6d88bb0bf479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flingee: {fileID: 573697661}
 --- !u!1001 &1209339573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -947,7 +950,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150d1eb3d2d75784095c6d88bb0bf479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flingee: {fileID: 573697661}
 --- !u!50 &1855410477
 Rigidbody2D:
   serializedVersion: 4
