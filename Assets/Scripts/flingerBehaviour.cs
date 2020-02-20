@@ -23,7 +23,7 @@ public class flingerBehaviour : MonoBehaviour
         );
         lr.colorGradient = gradient;
         lr.startWidth = 0.1f;
-        lr.endWidth = 0.1f;
+        lr.endWidth = 0.01f;
 
         cam = Camera.main;
         rb = GetComponent<Rigidbody2D>();
@@ -42,7 +42,7 @@ public class flingerBehaviour : MonoBehaviour
         }
         else if (!Input.GetMouseButton(0))
         {
-            lr.positionCount = 0;
+            lr.enabled = false;
         }
 
         if (Input.GetMouseButtonUp(0) && rb.IsSleeping())
@@ -64,6 +64,7 @@ public class flingerBehaviour : MonoBehaviour
 
     void drawArc()
     {
+        lr.enabled = true;
         int pointCount = 25;
         lr.SetPosition(0, gameObject.transform.position);
         lr.positionCount = pointCount;

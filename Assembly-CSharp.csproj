@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\collisionDamage.cs" />
      <Compile Include="Assets\Scripts\flingerBehaviour.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Users/Sam/Documents/Git/FlingerGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
