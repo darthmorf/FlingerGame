@@ -44,10 +44,15 @@ public class planetBehaviour : MonoBehaviour
 
     void DoSpacePhysics()
     {
-        float dist = Vector2.Distance(gameObject.transform.position, flingee.transform.position);
-        if (dist <= radius)
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Gravity");
+
+        foreach (GameObject go in gameObjects)
         {
-            flingee.GetComponent<Rigidbody2D>().AddForce(transform.position - flingee.transform.position);
+            float dist = Vector2.Distance(gameObject.transform.position, go.transform.position);
+            if (dist <= radius)
+            {
+                go.GetComponent<Rigidbody2D>().AddForce(transform.position - go.transform.position);
+            }
         }
     }
 }
