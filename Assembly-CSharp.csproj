@@ -57,6 +57,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\collisionDamage.cs" />
      <Compile Include="Assets\Scripts\flingerBehaviour.cs" />
+     <Compile Include="Assets\Scripts\planetBehaviour.cs" />
+     <Compile Include="Assets\Scripts\sceneInit.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Users/Sam/Documents/Git/FlingerGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

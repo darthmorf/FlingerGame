@@ -10,6 +10,8 @@ public class flingerBehaviour : MonoBehaviour
     private Rigidbody2D rb;
 
     private Vector2 launchVelocity = new Vector2(2f, 4f);
+    public bool space = true;
+    public GameObject planet;
 
     void Start()
     {
@@ -54,7 +56,7 @@ public class flingerBehaviour : MonoBehaviour
     void Launch()
     {
         rb.velocity = launchVelocity;    
-    }
+    }    
 
     Vector2 calculatePosition(float elapsedTime)
     {
