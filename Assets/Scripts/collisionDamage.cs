@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class collisionDamage : MonoBehaviour
 {
-    private float health = 20f;
+    public float health = 20f;
     // Update is called once per frame
     void OnCollisionEnter2D(Collision2D collision)
     {
