@@ -8,8 +8,6 @@ public class planetBehaviour : MonoBehaviour
     private LineRenderer lr;
     private float radius = 3f;
 
-    public GameObject flingee;
-
     void Start()
     {        
         lr = gameObject.AddComponent<LineRenderer>();
@@ -49,8 +47,10 @@ public class planetBehaviour : MonoBehaviour
         foreach (GameObject go in gameObjects)
         {
             float dist = Vector2.Distance(gameObject.transform.position, go.transform.position);
-            if (dist <= radius)
+            if (dist <= radius) // Within 'atmosphere'
             {
+                if (go.name == "Flingee")
+                    Debug.Log(dist - gameObject.GetComponent<CircleCollider2D>().radius);
                 go.GetComponent<Rigidbody2D>().AddForce(transform.position - go.transform.position);
             }
         }

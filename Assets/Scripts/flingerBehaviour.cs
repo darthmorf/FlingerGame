@@ -11,7 +11,6 @@ public class flingerBehaviour : MonoBehaviour
 
     private Vector2 launchVelocity = new Vector2(2f, 4f);
     public bool space = true;
-    public GameObject planet;
 
     void Start()
     {
@@ -35,7 +34,7 @@ public class flingerBehaviour : MonoBehaviour
     {
         line.transform.position = gameObject.transform.position;
 
-        if (Input.GetMouseButton(0) && rb.IsSleeping())
+        if (Input.GetMouseButton(0) && gameObject.GetComponent<Rigidbody2D>().velocity.magnitude < 0.01f)
         {
             Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             launchVelocity = ((Vector2) transform.position - mousePos) * 2;
