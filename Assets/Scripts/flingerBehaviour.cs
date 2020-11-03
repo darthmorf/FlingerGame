@@ -62,6 +62,7 @@ public class flingerBehaviour : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && rb.IsSleeping())
         {
             Launch();
+            PlayRandomMeow();
         }
 
         if (meowing)
@@ -102,14 +103,21 @@ public class flingerBehaviour : MonoBehaviour
 
     public void OnHit()
     {
-        if (!meowing)
-        {
-            meowing = true;
-            sr.sprite = meowSprite;
+        PlayRandomMeow();
+    }
 
-            rs.clip = meows[Random.Range(0, meows.Length)];
-            meowLength = rs.clip.length;
-            rs.Play();
-        }
+    public void PlayRandomMeow()
+    {
+        if (meowing)
+            return;
+        
+        meowing = true;
+        sr.sprite = meowSprite;
+
+        PlayRandomMeow();
+
+        rs.clip = meows[Random.Range(0, meows.Length)];
+        meowLength = rs.clip.length;
+        rs.Play();
     }
 }

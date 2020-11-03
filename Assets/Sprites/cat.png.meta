@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: 3463857228526754693
     second: cat_1
+  - first:
+      213: 2656336351118485934
+    second: cat_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -129,34 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cat_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 310
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8fa15e4822beee00800000000000000
-      internalID: 1075993247170539406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: cat_1
       rect:
         serializedVersion: 2
-        x: 310
+        x: 297
         y: 0
-        width: 310
-        height: 215
+        width: 297
+        height: 303
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,6 +148,27 @@ TextureImporter:
       bones: []
       spriteID: 58b910b0cc7121030800000000000000
       internalID: 3463857228526754693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 297
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9ef5466d33dd420800000000000000
+      internalID: 2656336351118485934
       vertices: []
       indices: 
       edges: []
