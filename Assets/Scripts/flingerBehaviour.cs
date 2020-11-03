@@ -50,7 +50,7 @@ public class flingerBehaviour : MonoBehaviour
         if (Input.GetMouseButton(0) && gameObject.GetComponent<Rigidbody2D>().velocity.magnitude < 3f)
         {
             Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-            launchVelocity = ((Vector2) transform.position - mousePos) * 2;
+            launchVelocity = ((Vector2) transform.position - mousePos) * 4;
 
             drawArc();
         }
