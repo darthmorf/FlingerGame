@@ -73,7 +73,7 @@ public class collisionDamage : MonoBehaviour
 
     public void PlayRandomWoof()
     {
-        if (woofing)
+        if (woofing || !dog)
             return;
 
         woofing = true;

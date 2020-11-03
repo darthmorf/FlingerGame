@@ -47,7 +47,7 @@ public class flingerBehaviour : MonoBehaviour
     {
         line.transform.position = gameObject.transform.position;
 
-        if (Input.GetMouseButton(0) && gameObject.GetComponent<Rigidbody2D>().velocity.magnitude < 0.01f)
+        if (Input.GetMouseButton(0) && gameObject.GetComponent<Rigidbody2D>().velocity.magnitude < 1f)
         {
             Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             launchVelocity = ((Vector2) transform.position - mousePos) * 2;
