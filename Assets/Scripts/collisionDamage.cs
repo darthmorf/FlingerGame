@@ -38,7 +38,7 @@ public class collisionDamage : MonoBehaviour
             fb.OnHit();
         }
 
-        if (strength > 5)
+        if (strength > 4)
         {
             health -= strength;
             if (dog)

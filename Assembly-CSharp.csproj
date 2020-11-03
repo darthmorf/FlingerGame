@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\flingerBehaviour.cs" />
     <Compile Include="Assets\Scripts\collisionDamage.cs" />
     <Compile Include="Assets\Scripts\cameraController.cs" />
+    <Compile Include="Assets\Scripts\musicPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

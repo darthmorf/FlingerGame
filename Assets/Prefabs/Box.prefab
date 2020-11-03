@@ -53,6 +53,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -101,18 +102,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00091958046, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 0.6125, y: 0.6125}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.6160908, y: 0.6179304}
   m_EdgeRadius: 0
 --- !u!50 &5266270323191465050
 Rigidbody2D:
@@ -148,6 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
+  dog: 0
+  woofSprite: {fileID: 0}
+  woofs: []
 --- !u!1 &5266270323729253826
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,6 +201,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -249,7 +254,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 0.6125, y: 0.6125}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -257,18 +262,28 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.14197493, y: -0.13021177}
-      - {x: 0.09263778, y: -0.13748974}
-      - {x: 0.0818336, y: -0.09936553}
-      - {x: 0.097532034, y: -0.0677858}
-      - {x: 0.044076204, y: -0.015839338}
-      - {x: 0.10609317, y: 0.063159406}
-      - {x: 0.07686734, y: 0.24905878}
-      - {x: 0.034372568, y: 0.32}
-      - {x: 0.32, y: 0.32}
-      - {x: 0.31999993, y: -0.23702389}
-      - {x: 0.13039589, y: -0.23375529}
-      - {x: 0.09712291, y: -0.1854443}
+    - - {x: -0.07141629, y: -0.045936428}
+      - {x: -0.073236376, y: -0.05649598}
+      - {x: -0.083553225, y: -0.059893936}
+      - {x: -0.0858593, y: -0.044601798}
+      - {x: -0.07675743, y: -0.045450497}
+      - {x: -0.09034902, y: -0.049091388}
+      - {x: 0.03962955, y: 0.00067192316}
+      - {x: 0.005282402, y: 0.022274256}
+      - {x: -0.053457916, y: 0.09011233}
+      - {x: -0.020567715, y: 0.1071018}
+      - {x: 0.04642248, y: 0.15782745}
+      - {x: -0.019624233, y: 0.19633532}
+      - {x: 0.036815643, y: 0.22695851}
+      - {x: 0.0023698807, y: 0.2685492}
+      - {x: 0.026760291, y: 0.30625}
+      - {x: 0.13234158, y: 0.30442968}
+      - {x: 0.25596333, y: 0.035108924}
+      - {x: 0.08440226, y: -0.15564728}
+      - {x: -0.08671743, y: -0.04654213}
+      - {x: -0.03028135, y: -0.021658987}
+      - {x: 0.04375334, y: 0.012323111}
+      - {x: -0.08415881, y: -0.051391393}
 --- !u!50 &5266270323729253824
 Rigidbody2D:
   serializedVersion: 4
@@ -303,6 +318,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  dog: 0
+  woofSprite: {fileID: 0}
+  woofs: []
 --- !u!1 &5266270323852894391
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +370,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -404,7 +423,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 0.6125, y: 0.6125}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -412,24 +431,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.044959545, y: -0.21275485}
-      - {x: -0.24491882, y: -0.22591174}
-      - {x: -0.26307964, y: -0.14016736}
-      - {x: -0.31698275, y: -0.11314118}
-      - {x: -0.3283298, y: 0.07782447}
-      - {x: -0.26408434, y: 0.06611967}
-      - {x: -0.24962902, y: 0.16892219}
-      - {x: -0.14923835, y: 0.19717157}
-      - {x: -0.13101101, y: 0.3259917}
-      - {x: 0.058168888, y: 0.33451152}
-      - {x: 0.112066984, y: 0.2900418}
-      - {x: 0.14405036, y: 0.27303767}
-      - {x: 0.14629316, y: 0.030249238}
-      - {x: 0.078142405, y: -0.033121467}
-      - {x: 0.09068298, y: -0.1047256}
-      - {x: 0.0024757385, y: -0.11943209}
-      - {x: -0.06436968, y: -0.08077967}
-      - {x: -0.118694544, y: -0.089238524}
+    - - {x: -0.30625, y: -0.30625}
+      - {x: -0.30260888, y: 0.118264124}
+      - {x: -0.22190514, y: 0.040471934}
+      - {x: 0.08416214, y: -0.14787671}
+      - {x: -0.24169311, y: -0.29811963}
+      - {x: -0.22870731, y: -0.29455674}
+      - {x: -0.24982014, y: -0.30078873}
 --- !u!50 &5266270323852894389
 Rigidbody2D:
   serializedVersion: 4
@@ -464,6 +472,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  dog: 0
+  woofSprite: {fileID: 0}
+  woofs: []
 --- !u!1 &5266270324257137288
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +524,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -565,7 +577,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 0.6125, y: 0.6125}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -573,19 +585,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.32, y: -0.32}
-      - {x: -0.32, y: -0.06}
-      - {x: -0.21449375, y: -0.105460286}
-      - {x: -0.21957827, y: -0.19267726}
-      - {x: -0.10194516, y: -0.18713081}
-      - {x: -0.1799674, y: -0.038202524}
-      - {x: -0.06179762, y: -0.04003215}
-      - {x: 0.03000474, y: -0.09184027}
-      - {x: 0.025939941, y: -0.017499924}
-      - {x: 0.15633988, y: -0.06732011}
-      - {x: 0.18897462, y: -0.19675326}
-      - {x: 0.31999993, y: -0.19277763}
-      - {x: 0.32, y: -0.32}
+    - - {x: -0.20588827, y: 0.022513986}
+      - {x: -0.30260888, y: 0.094235756}
+      - {x: -0.30625, y: 0.30625}
+      - {x: 0.03052149, y: 0.30078867}
+      - {x: 0.009933472, y: 0.26249444}
+      - {x: 0.040957928, y: 0.2323417}
+      - {x: 0.050059795, y: 0.22249758}
+      - {x: -0.007946491, y: 0.19269979}
+      - {x: 0.062964916, y: 0.16257179}
+      - {x: -0.033267975, y: 0.09173477}
+      - {x: 0.006766796, y: 0.031278968}
+      - {x: 0.059271812, y: 0.007247925}
+      - {x: -0.0031757355, y: -0.008429706}
+      - {x: -0.07918978, y: -0.05758457}
+      - {x: -0.12008457, y: -0.03391914}
 --- !u!50 &5266270324257137294
 Rigidbody2D:
   serializedVersion: 4
@@ -620,6 +634,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  dog: 0
+  woofSprite: {fileID: 0}
+  woofs: []
 --- !u!1 &5266270324907554893
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +686,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -721,7 +739,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 0.6125, y: 0.6125}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -729,17 +747,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.2316947, y: 0.04513365}
-      - {x: -0.31843424, y: 0.0450992}
-      - {x: -0.3141129, y: 0.049058378}
-      - {x: -0.32, y: 0.32}
-      - {x: -0.0890584, y: 0.32588702}
-      - {x: -0.11055136, y: 0.25748152}
-      - {x: -0.1287787, y: 0.23148137}
-      - {x: -0.08513355, y: 0.19849342}
-      - {x: -0.08513355, y: 0.15335971}
-      - {x: -0.2089386, y: 0.14359468}
-      - {x: -0.22943497, y: 0.107928574}
+    - - {x: -0.26462287, y: -0.3080704}
+      - {x: -0.2537009, y: -0.2908379}
+      - {x: 0.06444836, y: -0.16319859}
+      - {x: 0.18892622, y: -0.05398369}
+      - {x: 0.246665, y: 0.0445956}
+      - {x: 0.11741543, y: 0.30625}
+      - {x: 0.30625, y: 0.30625}
+      - {x: 0.30625, y: -0.30625}
 --- !u!50 &5266270324907554883
 Rigidbody2D:
   serializedVersion: 4
@@ -774,3 +789,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  dog: 0
+  woofSprite: {fileID: 0}
+  woofs: []
