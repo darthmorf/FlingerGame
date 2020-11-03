@@ -10,6 +10,12 @@ public class collisionDamage : MonoBehaviour
     {
         float strength = collision.relativeVelocity.magnitude;
 
+        flingerBehaviour fb = collision.gameObject.GetComponent<flingerBehaviour>();
+        if (fb != null)
+        {
+            fb.OnHit();
+        }
+
         if (strength > 5)
         {
             health -= strength;

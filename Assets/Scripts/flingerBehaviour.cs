@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class flingerBehaviour : MonoBehaviour
 {
@@ -8,15 +9,25 @@ public class flingerBehaviour : MonoBehaviour
     private Camera cam;
     private GameObject line;
     private Rigidbody2D rb;
+    private Sprite mainSprite;
+    private SpriteRenderer sr;
+    private AudioSource rs;
+    [SerializeField] private Sprite meowSprite;
+    [SerializeField] private AudioClip[] meows;
 
     private Vector2 launchVelocity = new Vector2(2f, 4f);
     public bool space = true;
+    private float meowTimer = 0f;
+    private float meowLength = 0f;
+    private bool meowing = false;
 
     void Start()
     {
         line = new GameObject();        
         lr = line.AddComponent<LineRenderer>();
+        rs = GetComponent<AudioSource>();
         lr.material = new Material(Shader.Find("Sprites/Default"));
+        sr = GetComponent<SpriteRenderer>();
         Gradient gradient = new Gradient();
         gradient.SetKeys(
             new GradientColorKey[] { new GradientColorKey(Color.white, 0.0f) },
@@ -28,6 +39,8 @@ public class flingerBehaviour : MonoBehaviour
 
         cam = Camera.main;
         rb = GetComponent<Rigidbody2D>();
+
+        mainSprite = sr.sprite;
     }
 
     void Update()
@@ -49,6 +62,18 @@ public class flingerBehaviour : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && rb.IsSleeping())
         {
             Launch();
+        }
+
+        if (meowing)
+        {
+            meowTimer += Time.deltaTime;
+
+            if (meowTimer >= meowLength)
+            {
+                meowTimer = 0f;
+                meowing = false;
+                sr.sprite = mainSprite;
+            }
         }
     }
 
@@ -73,5 +98,18 @@ public class flingerBehaviour : MonoBehaviour
         {
             lr.SetPosition(i, calculatePosition(0.05f * i));
         }        
+    }
+
+    public void OnHit()
+    {
+        if (!meowing)
+        {
+            meowing = true;
+            sr.sprite = meowSprite;
+
+            rs.clip = meows[Random.Range(0, meows.Length)];
+            meowLength = rs.clip.length;
+            rs.Play();
+        }
     }
 }
