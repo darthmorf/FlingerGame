@@ -9,6 +9,4 @@ public class sceneInit : MonoBehaviour
     {
         Physics2D.gravity = gravity;
     }
-
-  
 }
