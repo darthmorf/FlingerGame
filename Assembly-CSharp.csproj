@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\planetBehaviour.cs" />
     <Compile Include="Assets\Scripts\flingerBehaviour.cs" />
     <Compile Include="Assets\Scripts\collisionDamage.cs" />
+    <Compile Include="Assets\Scripts\cameraController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
