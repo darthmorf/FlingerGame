@@ -5,6 +5,28 @@ using UnityEngine;
 public class collisionDamage : MonoBehaviour
 {
     public float health = 20f;
+    public bool dog = false;
+
+    private SpriteRenderer sr;
+    private AudioSource rs;
+    private Sprite mainSprite;
+    [SerializeField] private Sprite woofSprite;
+    [SerializeField] private AudioClip[] woofs;
+
+    private float woofTimer = 0f;
+    private float woofLength = 0f;
+    private bool woofing = false;
+
+    void Start()
+    {
+        if (dog)
+        {
+            sr = GetComponent<SpriteRenderer>();
+            rs = GetComponent<AudioSource>();
+            mainSprite = sr.sprite;
+        }
+    }
+
     // Update is called once per frame
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,9 +41,11 @@ public class collisionDamage : MonoBehaviour
         if (strength > 5)
         {
             health -= strength;
+            if (dog)
+                PlayRandomWoof();
         }
 
-        if (health <= 0)
+        if (health <= 0 && !woofing)
         {
             foreach (Transform child in transform)
             {
@@ -34,6 +58,29 @@ public class collisionDamage : MonoBehaviour
 
     void Update()
     {
-        
+        if (woofing)
+        {
+            woofTimer += Time.deltaTime;
+
+            if (woofTimer >= woofLength)
+            {
+                woofTimer = 0f;
+                woofing = false;
+                sr.sprite = mainSprite;
+            }
+        }
+    }
+
+    public void PlayRandomWoof()
+    {
+        if (woofing)
+            return;
+
+        woofing = true;
+        sr.sprite = woofSprite;
+
+        rs.clip = woofs[Random.Range(0, woofs.Length)];
+        woofLength = rs.clip.length;
+        rs.Play();
     }
 }
