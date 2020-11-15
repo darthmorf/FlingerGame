@@ -15,7 +15,7 @@ public class flingerBehaviour : MonoBehaviour
     [SerializeField] private Sprite meowSprite;
     [SerializeField] private AudioClip[] meows;
 
-    private Vector2 launchVelocity = new Vector2(2f, 4f);
+    private Vector2 launchVelocity = new Vector2(6f, 12f);
     public bool space = true;
     private float meowTimer = 0f;
     private float meowLength = 0f;
@@ -30,8 +30,8 @@ public class flingerBehaviour : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         Gradient gradient = new Gradient();
         gradient.SetKeys(
-            new GradientColorKey[] { new GradientColorKey(Color.white, 0.0f) },
-            new GradientAlphaKey[] { new GradientAlphaKey(0.5f, 0.0f), new GradientAlphaKey(0f, 1f) }
+            new GradientColorKey[] { new GradientColorKey(Color.green, 0.0f), new GradientColorKey(Color.red, 0.5f) },
+            new GradientAlphaKey[] { new GradientAlphaKey(0.5f, 0.0f), new GradientAlphaKey(0.25f, 0.5f), new GradientAlphaKey(0f, 1f) }
         );
         lr.colorGradient = gradient;
         lr.startWidth = 0.1f;
