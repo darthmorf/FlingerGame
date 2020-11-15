@@ -14,6 +14,7 @@ public class collisionDamage : MonoBehaviour
     [SerializeField] private Sprite brokenSprite;
     [SerializeField] private Sprite woofSprite;
     [SerializeField] private AudioClip[] woofs;
+    [SerializeField] private bool unfreeze = true;
 
     private float woofTimer = 0f;
     private float woofLength = 0f;
@@ -32,8 +33,11 @@ public class collisionDamage : MonoBehaviour
     // Update is called once per frame
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (unfreeze)
+        {
+            gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        }
         float strength = collision.relativeVelocity.magnitude;
-        gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
 
         flingerBehaviour fb = collision.gameObject.GetComponent<flingerBehaviour>();
         if (fb != null)
