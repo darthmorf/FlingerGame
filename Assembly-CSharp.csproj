@@ -99,6 +99,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\MainMenu\mainmenubutton.cs" />
     <Compile Include="Assets\Scripts\winChecker.cs" />
+    <Compile Include="Assets\Scripts\catPointer.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
