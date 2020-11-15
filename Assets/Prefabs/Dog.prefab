@@ -160,8 +160,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deaa2bf8768d6d947bfa7037909adec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 20
   health: 5
   dog: 0
+  brokenSprite: {fileID: 0}
   woofSprite: {fileID: 0}
   woofs: []
 --- !u!1 &7409287926181618086
@@ -322,8 +324,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deaa2bf8768d6d947bfa7037909adec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 20
   health: 5
   dog: 0
+  brokenSprite: {fileID: 0}
   woofSprite: {fileID: 0}
   woofs: []
 --- !u!1 &8810307635297960924
@@ -340,7 +344,7 @@ GameObject:
   - component: {fileID: 8810307635297960935}
   - component: {fileID: 6106410936266354962}
   - component: {fileID: 7520328327132868328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Dog
   m_TagString: Gravity
   m_Icon: {fileID: 0}
@@ -448,8 +452,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deaa2bf8768d6d947bfa7037909adec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 20
   health: 2
   dog: 1
+  brokenSprite: {fileID: 0}
   woofSprite: {fileID: 9118213209582376027, guid: cea19583daa046b46bb215c080ae07d2,
     type: 3}
   woofs:

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class collisionDamage : MonoBehaviour
 {
+    public float maxHealth = 20f;
     public float health = 20f;
     public bool dog = false;
 
     private SpriteRenderer sr;
     private AudioSource rs;
     private Sprite mainSprite;
+    [SerializeField] private Sprite brokenSprite;
     [SerializeField] private Sprite woofSprite;
     [SerializeField] private AudioClip[] woofs;
 
@@ -43,6 +45,11 @@ public class collisionDamage : MonoBehaviour
             health -= strength;
             if (dog)
                 PlayRandomWoof();
+        }
+
+        if (health <= maxHealth / 2 && brokenSprite != null)
+        {
+            sr.sprite = brokenSprite;
         }
 
         if (health <= 0 && !woofing)

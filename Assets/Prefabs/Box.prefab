@@ -148,9 +148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deaa2bf8768d6d947bfa7037909adec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 20
   health: 20
   dog: 0
-  woofSprite: {fileID: 0}
+  brokenSprite: {fileID: 0}
+  woofSprite: {fileID: 21300000, guid: aee05427db255f348ac8b84346917733, type: 3}
   woofs: []
 --- !u!1 &5266270323729253826
 GameObject:
@@ -317,8 +319,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deaa2bf8768d6d947bfa7037909adec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 20
   health: 5
   dog: 0
+  brokenSprite: {fileID: 0}
   woofSprite: {fileID: 0}
   woofs: []
 --- !u!1 &5266270323852894391
@@ -471,8 +475,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deaa2bf8768d6d947bfa7037909adec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 20
   health: 5
   dog: 0
+  brokenSprite: {fileID: 0}
   woofSprite: {fileID: 0}
   woofs: []
 --- !u!1 &5266270324257137288
@@ -633,8 +639,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deaa2bf8768d6d947bfa7037909adec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 20
   health: 5
   dog: 0
+  brokenSprite: {fileID: 0}
   woofSprite: {fileID: 0}
   woofs: []
 --- !u!1 &5266270324907554893
@@ -788,7 +796,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deaa2bf8768d6d947bfa7037909adec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 20
   health: 5
   dog: 0
+  brokenSprite: {fileID: 0}
   woofSprite: {fileID: 0}
   woofs: []
