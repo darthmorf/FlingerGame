@@ -33,6 +33,7 @@ public class collisionDamage : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         float strength = collision.relativeVelocity.magnitude;
+        gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
 
         flingerBehaviour fb = collision.gameObject.GetComponent<flingerBehaviour>();
         if (fb != null)

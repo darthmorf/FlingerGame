@@ -6,10 +6,19 @@ public class musicPlayer : MonoBehaviour
 {
     [SerializeField] private AudioClip[] music;
     AudioSource audio;
+    private static musicPlayer instance;
 
     private void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        DontDestroyOnLoad(this);
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
         audio = GetComponent<AudioSource>();
     }
 
