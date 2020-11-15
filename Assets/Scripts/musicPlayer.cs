@@ -7,8 +7,9 @@ public class musicPlayer : MonoBehaviour
     [SerializeField] private AudioClip[] music;
     AudioSource audio;
 
-    void Start()
+    private void Awake()
     {
+        DontDestroyOnLoad(transform.gameObject);
         audio = GetComponent<AudioSource>();
     }
 
