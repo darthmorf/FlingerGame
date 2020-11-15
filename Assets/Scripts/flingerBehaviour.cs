@@ -59,7 +59,7 @@ public class flingerBehaviour : MonoBehaviour
             lr.enabled = false;
         }
 
-        if (Input.GetMouseButtonUp(0) && rb.IsSleeping())
+        if (Input.GetMouseButtonUp(0) && rb.velocity.sqrMagnitude < 1f)
         {
             Launch();
             PlayRandomMeow();
