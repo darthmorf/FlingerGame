@@ -453,13 +453,13 @@ MonoBehaviour:
   woofSprite: {fileID: 9118213209582376027, guid: cea19583daa046b46bb215c080ae07d2,
     type: 3}
   woofs:
-  - {fileID: 8300000, guid: 7fc9c64ce5701b043a386f331defc392, type: 3}
-  - {fileID: 8300000, guid: f2c7b8c5575614c41be7632dcaccb8c2, type: 3}
-  - {fileID: 8300000, guid: bb3345551ca8f0641bba841de3238718, type: 3}
-  - {fileID: 8300000, guid: 574ec8208a3274e45abe01d21b9d0555, type: 3}
-  - {fileID: 8300000, guid: fcbba25ca425e084daa18a3ded283efe, type: 3}
-  - {fileID: 8300000, guid: f241c40460c203c45a15e3a0e8168be1, type: 3}
-  - {fileID: 8300000, guid: 88a9e99f0f190ab4996341042f656727, type: 3}
+  - {fileID: 8300000, guid: ff34b9591caf818408ecfb0531ab3ddc, type: 3}
+  - {fileID: 8300000, guid: 79120de286a6bfa47b17bc4f32226b98, type: 3}
+  - {fileID: 8300000, guid: 7c75524d0ac796e41b3d989e5965a4ff, type: 3}
+  - {fileID: 8300000, guid: b3b2085f81ecd634587970506e3c9d47, type: 3}
+  - {fileID: 8300000, guid: 33a1ea3e102a24e4daa0b3f258120e52, type: 3}
+  - {fileID: 8300000, guid: f07c197409563bb46874731942d6c415, type: 3}
+  - {fileID: 8300000, guid: a61deafee2594124c89dfa076b5dcf1d, type: 3}
 --- !u!60 &6106410936266354962
 PolygonCollider2D:
   m_ObjectHideFlags: 0
